@@ -1,0 +1,112 @@
+body, #render-target {
+  width: 100%;
+  height: 100%;
+}
+
+    .ellipsis {  
+      overflow : hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      }
+      .smooth-scroll {
+       overflow-y: scroll; /* has to be scroll, not auto */
+       overflow-x: hidden; /* stop sideways scrollbars */
+      -webkit-overflow-scrolling: touch;
+      }
+    select.select {
+     -webkit-appearance: none;
+     border-radius: 0px;
+    }
+    input, textarea {
+    -webkit-appearance: none;
+    border-radius: 0; }
+    input[type="checkbox"]:checked + label {
+        background-image: url("/images/checkbox-on%402x.png");
+    }
+    input[type="checkbox"]:checked + label.checklist-alt {
+        background-image: url("/images/checkmark-yellow.png");
+    }
+    input[type="radio"]:checked + label {
+        background-image: url("/images/radio-filled.png");
+      }
+    input[type="radio"]:checked + label.rsvp-yes-bg {
+        color: #fff; 
+        background-color: #57ba6e;
+      	background-image: none;
+    }
+    input[type="radio"]:checked + label.rsvp-no-bg {
+        color: #fff;
+        background-color: #152b4d;
+        background-image: none;
+    }
+    p,a,h1,h2,h3,h4,h5,div{
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    }
+    .directory-info {
+    	vertical-align: middle;
+    }
+    .btn-text {
+    	vertical-align: middle;
+    }
+    .guest {
+    	vertical-align: middle;
+    }
+    .w-input::-webkit-input-placeholder { /* WebKit browsers */    color:    #fff;}
+    .w-input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */    color:    #fff;    opacity: 1;}
+    .w-input::-moz-placeholder { /* Mozilla Firefox 19+ */    color:    #fff;    opacity: 1;}
+    .w-input:-ms-input-placeholder { /* Internet Explorer 10+ */    color:    #fff;}
+    .w-input.new-color::-webkit-input-placeholder { /* WebKit browsers */    color:    #fff;}
+    /* Loading spinner */
+      .spinner {
+      animation: rotator 1.4s linear infinite; 
+      height: 44px;
+      width: 44px;
+    }
+    @keyframes rotator {
+      0% {
+        transform: rotate(0deg); 
+      }
+      100% {
+        transform: rotate(270deg); 
+        } 
+      }
+    .path {
+      stroke-dasharray: 187;
+      stroke-dashoffset: 0;
+      transform-origin: center;
+      animation: dash 1.4s ease-in-out infinite, colors 5.6s ease-in-out infinite; 
+    }
+    @keyframes colors {
+      0% {
+        stroke: #4379d3; 
+      }
+      25% {
+        stroke: #fff; 
+      }
+      50% {
+        stroke: #4379d3; 
+      }
+      75% {
+        stroke: #fff; 
+      }
+      100% {
+        stroke: #4379d3; 
+        } 
+      }
+    @keyframes dash {
+      0% {
+        stroke-dashoffset: 187; 
+      }
+      50% {
+        stroke-dashoffset: 46.75;
+        transform: rotate(135deg); 
+      }
+      100% {
+        stroke-dashoffset: 187;
+        transform: rotate(450deg); 
+        } 
+      }
+  

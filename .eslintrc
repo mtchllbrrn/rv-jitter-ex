@@ -1,0 +1,15 @@
+{ 
+  "extends": "poetic",
+  "rules": {
+    "import/no-unresolved": [
+      2, { "ignore": ["^meteor/"] }
+    ],
+    "react/prop-types": 0
+  },
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true
+    }
+  }
+}
