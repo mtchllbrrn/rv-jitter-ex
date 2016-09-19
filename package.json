@@ -13,7 +13,7 @@
     "react-addons-pure-render-mixin": "^15.3.1",
     "react-addons-shallow-compare": "^15.3.1",
     "react-dom": "^15.3.1",
-    "react-virtualized": "^7.19.4"
+    "react-virtualized": "^8.0.3"
   },
   "devDependencies": {
     "eslint-config-poetic": "^1.0.2"

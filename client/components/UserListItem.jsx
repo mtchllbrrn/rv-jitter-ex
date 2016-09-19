@@ -3,9 +3,10 @@ import React from 'react';
 class UserListItem extends React.Component {
   render() {
     const user = this.props.data;
+    const style = this.props.style;
 
     return (
-      <a key={user._id} href="" className="w-inline-block directory-contact-link">
+      <a href="" className="w-inline-block directory-contact-link" style={style} >
         <div className="w-clearfix field border">
           <img className="user-photo-list"
             src={'/images/UserFace-60x60.png'}

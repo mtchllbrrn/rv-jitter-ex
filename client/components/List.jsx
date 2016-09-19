@@ -1,11 +1,17 @@
 import React from 'react';
-import { AutoSizer, VirtualScroll } from 'react-virtualized';
+import { AutoSizer, List as VirtualScroll } from 'react-virtualized';
 import 'react-virtualized/styles.css';
 import UserListItem from './UserListItem';
 
 export default class List extends React.Component {
-  rowRenderer(index, data) {
-    return <UserListItem data={data[index]} />;
+  rowRenderer({ data, index, key, style }) {
+    return (
+      <UserListItem
+        data={data[index]}
+        key={key}
+        style={style}
+      />
+    );
   }
 
   render() {
@@ -22,8 +28,8 @@ export default class List extends React.Component {
               width={width}
               rowCount={data.length}
               rowHeight={90}
-              rowRenderer={({ index }) => {
-                return this.rowRenderer(index, data);
+              rowRenderer={({ index, key, style }) => {
+                this.rowRenderer({ data, index, key, style });
               }}
             />
           )
